@@ -56,4 +56,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/software-noob/pterodactyl-images:java_${{ matrix.tag }}_shenandoah
+            ghcr.io/urubuhost/pterodactyl-images:java_${{ matrix.tag }}_shenandoah

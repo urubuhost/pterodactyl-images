@@ -56,4 +56,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/software-noob/pterodactyl-images:java_${{ matrix.tag }}_openj9
+            ghcr.io/urubuhost/pterodactyl-images:java_${{ matrix.tag }}_openj9

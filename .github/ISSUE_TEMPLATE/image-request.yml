@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-          Before opening new issue, make sure there are no existing requests by searching the [repository issues](https://github.com/software-noob/pterodactyl-images/issues?q=label%3A%22image+request%22+).
+          Before opening new issue, make sure there are no existing requests by searching the [repository issues](https://github.com/UrubuHost/pterodactyl-images/issues?q=label%3A%22image+request%22+).
   - type: dropdown
     id: expand
     attributes:

@@ -51,11 +51,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./java-graalvm
-          file: ./java-graalvm/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64,linux/arm64
+          file: ./java-graalvm/${{ matrix.tag }}/Dockerfile
           push: true
-          tags: |
-            ghcr.io/urubuhost/pterodactyl-images:java_${{ matrix.tag }}_graalvm
+          tags: ghcr.io/urubuhost/pterodactyl-images:java_${{ matrix.tag }}_graalvm

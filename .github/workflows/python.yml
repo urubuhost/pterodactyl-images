@@ -55,11 +55,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./python
-          file: ./python/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64,linux/arm64
+          file: ./python/${{ matrix.tag }}/Dockerfile
           push: true
-          tags: |
-            ghcr.io/urubuhost/pterodactyl-images:python_${{ matrix.tag }}
+          tags: ghcr.io/urubuhost/pterodactyl-images:python_${{ matrix.tag }}

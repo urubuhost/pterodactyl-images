@@ -44,11 +44,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./games
-          file: ./games/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64
+          file: ./games/${{ matrix.tag }}/Dockerfile
           push: true
-          tags: |
-            ghcr.io/urubuhost/pterodactyl-images:games_${{ matrix.tag }}
+          tags: ghcr.io/urubuhost/pterodactyl-images:games_${{ matrix.tag }}

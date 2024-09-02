@@ -1,4 +1,4 @@
-name: build java_shenandoah
+name: build java_shenandoah (shipilev openjdk)
 
 on:
   workflow_dispatch:
@@ -29,6 +29,7 @@ jobs:
           - 8
           - 11
           - 17
+          - 21
     steps:
       - name: Git checkout for Github repository workspace
         uses: actions/checkout@v4
@@ -49,11 +50,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./java-shenandoah
-          file: ./java-shenandoah/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64,linux/arm64
+          file: ./java-shenandoah/${{ matrix.tag }}/Dockerfile
           push: true
-          tags: |
-            ghcr.io/urubuhost/pterodactyl-images:java_${{ matrix.tag }}_shenandoah
+          tags: ghcr.io/urubuhost/pterodactyl-images:java_${{ matrix.tag }}_shenandoah

@@ -46,11 +46,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: ./java-dragonwell
-          file: ./java-dragonwell/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64, linux/arm64
+          file: ./java-dragonwell/${{ matrix.tag }}/Dockerfile
           push: true
-          tags: |
-            ghcr.io/urubuhost/pterodactyl-images:java_${{ matrix.tag }}_dragonwell
+          tags: ghcr.io/urubuhost/pterodactyl-images:java_${{ matrix.tag }}_dragonwell

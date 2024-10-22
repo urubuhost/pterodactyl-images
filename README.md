@@ -28,6 +28,7 @@ Navigate to `Admin Panel -> Nests -> Select your egg`. Add Docker image URL(s) f
 | [Java Shenandoah](https://github.com/urubuhost/pterodactyl-images#java-shenandoah-amd64arm64)           | AMD64, ARM64        |
 | [Node.js](https://github.com/urubuhost/pterodactyl-images#nodejs-amd64arm64)                            | AMD64, ARM64        |
 | [Python](https://github.com/urubuhost/pterodactyl-images#python-amd64arm64)                             | AMD64, ARM64        |
+| [Dragonfly](https://github.com/urubuhost/pterodactyl-images#dragonfly-amd64)                            | AMD64               |
 | [Sourcemod](https://github.com/urubuhost/pterodactyl-images#sourcemod-amd64)                            | AMD64               |
 
 ### Java Amazon Corretto [AMD64/ARM64]
@@ -199,6 +200,11 @@ These are [shipilev experimental builds.](https://builds.shipilev.net/) If you'r
   - `ghcr.io/urubuhost/pterodactyl-images:python_3.12`
 - [Python 3.13-rc](https://github.com/urubuhost/pterodactyl-images/tree/main/python/3.13-rc)
   - `ghcr.io/urubuhost/pterodactyl-images:python_3.13-rc`
+
+### Dragonfly [AMD64]
+
+- [Dragonfly Latest](https://github.com/urubuhost/pterodactyl-images/tree/main/dragonfly/latest)
+  - `ghcr.io/urubuhost/pterodactyl-images:dragonfly_latest`
 
 ## Game specific
 
